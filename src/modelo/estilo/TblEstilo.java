@@ -50,7 +50,7 @@ public class TblEstilo {
         tbl.setFont(new Font("Arial", Font.PLAIN, 12));
         tbl.setRowHeight(25);
         tbl.setShowVerticalLines(false);
-        tbl.setShowHorizontalLines(false);  
+        //tbl.setShowHorizontalLines(false);  
     }
     
 }

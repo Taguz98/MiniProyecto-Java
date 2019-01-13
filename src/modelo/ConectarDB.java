@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -15,7 +16,7 @@ public class ConectarDB {
     private Statement st; 
     private ResultSet rs; 
     
-    private String url = "jdbc:postgresql://localhost:5432/CRUDPersona"; 
+    private String url = "jdbc:postgresql://localhost:5432/MiniProyectoJava"; 
     private String user = "postgres"; 
     private String pass = "Holapostgres"; 
     
@@ -29,6 +30,16 @@ public class ConectarDB {
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("No pudimos conectarnos DB. "+ e.getMessage());
+        }
+    }
+    
+    public PreparedStatement sqlPS(String nsql){
+        try {
+            PreparedStatement ps = ct.prepareStatement(nsql); 
+            return ps; 
+        } catch (SQLException e) {
+            System.out.println("No se pudo preparar el statement. "+e.getMessage());
+            return null; 
         }
     }
     

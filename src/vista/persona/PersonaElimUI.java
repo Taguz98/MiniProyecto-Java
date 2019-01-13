@@ -1,4 +1,4 @@
-package vista;
+package vista.persona;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -41,11 +41,6 @@ public class PersonaElimUI extends javax.swing.JFrame {
     public void setLblMensaje(JLabel lblMensaje) {
         this.lblMensaje = lblMensaje;
     }
-
-    public JPanel getPnlFondo() {
-        return pnlFondo;
-    }
-    
     
 
     /**
@@ -143,6 +138,12 @@ public class PersonaElimUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void pnlHeaderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlHeaderMousePressed
+        //Al presionar el mause en el panel se cantura las posiciones
+        mouseX = evt.getX();
+        mouseY = evt.getY();
+    }//GEN-LAST:event_pnlHeaderMousePressed
+
     private void pnlHeaderMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlHeaderMouseDragged
         //Al tener sostenido el click se captura las posiciones
         int x = evt.getXOnScreen();
@@ -151,12 +152,6 @@ public class PersonaElimUI extends javax.swing.JFrame {
         //Restamos la posicion actual menos la posicion general
         this.setLocation(x - mouseX, y - mouseY);
     }//GEN-LAST:event_pnlHeaderMouseDragged
-
-    private void pnlHeaderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlHeaderMousePressed
-        //Al presionar el mause en el panel se cantura las posiciones
-        mouseX = evt.getX();
-        mouseY = evt.getY();
-    }//GEN-LAST:event_pnlHeaderMousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

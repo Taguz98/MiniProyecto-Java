@@ -1,7 +1,9 @@
 package controlador;
 
-import modelo.PersonaDB;
-import vista.PersonaUI;
+import controlador.persona.PersonaCTR;
+import modelo.persona.PersonaDB;
+import vista.LoginUI;
+import vista.persona.PersonaUI;
 
 /**
  *
@@ -17,7 +19,10 @@ public class MiniProyecto {
         
         PersonaCTR ctrPer = new PersonaCTR(per, personas); 
         ctrPer.iniciar();
+       /* LoginUI vtnLogin = new LoginUI(); 
         
+        LoginCTR login = new LoginCTR(vtnLogin); 
+        login.iniciar();*/
     }
     
     public static void estiloVentana(){

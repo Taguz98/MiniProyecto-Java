@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlador;
+package controlador.persona;
 
-import modelo.PersonaDB;
+import modelo.persona.PersonaDB;
 import modelo.estilo.BtnHover;
 import modelo.estilo.VtnBorde;
-import vista.PersonaElimUI;
-import vista.PersonaUI;
+import vista.persona.PersonaElimUI;
+import vista.persona.PersonaUI;
 
 /**
  *
@@ -36,9 +36,6 @@ public class EliminarCTR {
         //Agregamos las animaciones a los btns  
         elimPersona.getBtnCancelar().addMouseListener(new BtnHover(elimPersona.getBtnCancelar()));
         elimPersona.getBtnContinuar().addMouseListener(new BtnHover(elimPersona.getBtnContinuar()));
-        
-        //Le agregamos la animacion del borde a la ventana 
-        elimPersona.addWindowFocusListener(new VtnBorde(elimPersona.getPnlFondo()));
         
         //Le agregamos los nombres a la ventana  
         persona = persona.consultaPersona(id); 
