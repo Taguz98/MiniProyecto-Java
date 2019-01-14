@@ -157,31 +157,36 @@ public class RegistroCTR {
     }
 
     public void editar(UsuarioDB user) {
-        editando = true; 
+        editando = true;
         usuarioFrm.getTxtUsuario().setText(user.getUsuario());
 
         if (user.getFoto() != null) {
             medidasLblFoto();
-            
+
             Image img = user.getFoto();
             Image newimg = img.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
             ImageIcon newIcon = new ImageIcon(newimg);
 
             usuarioFrm.getLblFoto().setIcon(newIcon);
         }
-        
+
         medidasLblFoto();
     }
 
     public void cancelar() {
-        vtnLogin.setVisible(true);
-        vtnFrm.dispose();
+        if (editando) {
+            vtnFrm.dispose();
+        } else {
+
+            vtnLogin.setVisible(true);
+            vtnFrm.dispose();
+        }
     }
-    
-    public void medidasLblFoto(){ 
-        
-            System.out.println("Anchura: " + usuarioFrm.getLblFoto().getWidth());
-            System.out.println("Altura: " + usuarioFrm.getLblFoto().getHeight());
+
+    public void medidasLblFoto() {
+
+        System.out.println("Anchura: " + usuarioFrm.getLblFoto().getWidth());
+        System.out.println("Altura: " + usuarioFrm.getLblFoto().getHeight());
     }
 
 }

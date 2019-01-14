@@ -1,11 +1,13 @@
 package controlador;
 
+import controlador.persona.PersonaCTR;
 import controlador.usuario.RegistroCTR;
+import modelo.persona.PersonaDB;
 import modelo.usuario.UsuarioDB;
 import vista.InternalFrame;
-import vista.Prueba;
 import vista.VtnFrm;
 import vista.VtnPrincipal;
+import vista.persona.PersonaUI;
 import vista.usuario.UsuarioFrm;
 
 /**
@@ -28,7 +30,7 @@ public class VtnPrincipalCTR {
         
         vtnPrin.getBtnPerfil().addActionListener(e -> perfil()); 
         
-        vtnPrin.getBtnPersona().addActionListener(e -> agregar());
+        vtnPrin.getBtnPersona().addActionListener(e -> persona());
         vtnPrin.getBtnCaja().addActionListener(e -> caja());
     } 
     
@@ -42,13 +44,16 @@ public class VtnPrincipalCTR {
         rg.editar(user); 
     }
     
-    public void agregar(){
-        
+    public void persona(){
         System.out.println("Agregamos al panel principal");
-        Prueba pb = new Prueba(); 
+        PersonaUI vtnPersona = new PersonaUI(); 
+        PersonaDB persona = new PersonaDB(); 
         
-        vtnPrin.getDpnlPrincipal().add(pb); 
-        pb.show();
+        PersonaCTR perCTR = new PersonaCTR(vtnPersona, persona);
+        
+        perCTR.iniciar();
+        vtnPrin.getDpnlPrincipal().add(vtnPersona); 
+        vtnPersona.show();
     }
     
     public void caja(){ 

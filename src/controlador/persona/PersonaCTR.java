@@ -37,7 +37,7 @@ public class PersonaCTR {
         this.vtnPersona = vtnPersona;
         this.persona = persona;
         //Mostramos la ventana
-        vtnPersona.setVisible(true);
+        //vtnPersona.setVisible(true);
     }
     
     public void iniciar() {

@@ -1,10 +1,8 @@
 package vista.persona;
 
-import java.awt.Frame;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -13,7 +11,7 @@ import javax.swing.JTextField;
  *
  * @author Usuario
  */
-public class PersonaUI extends javax.swing.JFrame {
+public class PersonaUI extends javax.swing.JInternalFrame {
 
     //Esto lo uso para mover la ventana  
     private int mouseX; 
@@ -86,7 +84,12 @@ public class PersonaUI extends javax.swing.JFrame {
         pnlMensaje = new javax.swing.JPanel();
         lblMensaje = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Persona");
         setMinimumSize(new java.awt.Dimension(650, 400));
 
         pnlHeader.setBackground(new java.awt.Color(66, 88, 110));
@@ -294,7 +297,6 @@ public class PersonaUI extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
 

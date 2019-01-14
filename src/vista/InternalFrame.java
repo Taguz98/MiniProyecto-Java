@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
 /**
@@ -29,7 +24,10 @@ public class InternalFrame extends javax.swing.JInternalFrame {
 
         jLabel1 = new javax.swing.JLabel();
 
-        setBorder(null);
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
 
         jLabel1.setText("CAJA");
 
@@ -40,14 +38,14 @@ public class InternalFrame extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(127, 127, 127)
                 .addComponent(jLabel1)
-                .addContainerGap(257, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jLabel1)
-                .addContainerGap(226, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         pack();

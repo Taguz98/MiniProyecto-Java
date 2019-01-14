@@ -56,7 +56,7 @@ public class PersonaDB extends PersonaMD {
     //Con este metodo editaremos una persona  
     public boolean eliminarPersona(String id) {
         String nsql = "UPDATE public.persona\n"
-                + "SET eliminado ='true' "
+                + "SET elminado ='true' "
                 + "WHERE idpersona = " + id + ";";
 
         if (conect.nosql(nsql) == null) {

@@ -14,15 +14,15 @@ public class MiniProyecto {
     public static void main(String[] args) {
         estiloVentana();
         
-        PersonaUI per = new PersonaUI(); 
+        /*PersonaUI per = new PersonaUI(); 
         PersonaDB personas = new PersonaDB(); 
         
         PersonaCTR ctrPer = new PersonaCTR(per, personas); 
-        ctrPer.iniciar();
-       /* LoginUI vtnLogin = new LoginUI(); 
+        ctrPer.iniciar();*/
+       LoginUI vtnLogin = new LoginUI(); 
         
         LoginCTR login = new LoginCTR(vtnLogin); 
-        login.iniciar();*/
+        login.iniciar();
     }
     
     public static void estiloVentana(){
